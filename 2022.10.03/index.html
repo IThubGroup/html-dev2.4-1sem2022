@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-size: 24px;
+        }
+        table, td, th {
+            border-style: solid;
+        }
+        div {
+            background-color: darkviolet;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Списки</h2>
+<!--
+    Список
+        - дел
+        - покупок
+            молоко
+            хлеб
+            чай
+        - задач по работе
+-->
+<!--    ul (unordered list) - неупорядоченный список (маркированный) -->
+    <h3>Список продуктов</h3>
+    <ul>
+<!--        li (list) - один элемент списка -->
+        <li>Молоко</li>
+        <li>Хлеб</li>
+        <li>Чай</li>
+    </ul>
+    <h3>Список дел</h3>
+<!--    ol (ordered list) - упорядоченный список (нумерованный)-->
+    <ol>
+        <li>Проснуться</li>
+        <li>Поехать в колледж
+            <ul>
+                <li>JavaScript</li>
+                <li>HTML/CSS</li>
+                <li>web-сервера</li>
+                <li>JavaScript</li>
+            </ul>
+        </li>
+        <li>Вернуться домой</li>
+        <li>Поиграть в Dota2</li>
+        <li>Постараться оторваться от игры чтоб добраться до кровати</li>
+    </ol>
+    <h2>Таблицы</h2>
+<!--
+    table - таблица
+    tr (table row) - одна строка таблицы
+    td (table data) - ячейка строки
+    th (table head) - заголовочная ячейка (полужирное начертание и выравнивание текста по центру)
+    caption - заголовок таблицы
+-->
+<!--
+    table>tr*3>td*4
+-->
+<!--
+    Атрибуты:
+        rowspan - скольбко строк будет занимать ячейка
+        colspan - сколько столбцов справа от ячейки она будет занимать
+-->
+    <table>
+        <caption>Странная таблица</caption>
+        <!--        tr>th*5-->
+        <tr>
+            <th>First</th>
+            <th>Second</th>
+            <th>Third</th>
+            <th>Forth</th>
+            <th>Fifth</th>
+        </tr>
+        <tr>
+            <td rowspan="3">Ячейка 1</td>
+            <td>Яч2</td>
+            <td>Ячейка 3</td>
+            <td rowspan="2" colspan="2">Ячейка 4</td>
+        </tr>
+        <tr>
+            <td>
+                <div>Тут пробегал маленький котик</div>
+            </td>
+            <td>=)</td>
+        </tr>
+        <tr>
+            <td>Тралала</td>
+            <td colspan="2">Ололо</td>
+            <td>Ням-ням</td>
+        </tr>
+        <tr>
+            <td rowspan="2"><div>Ooops</div></td>
+            <td><div>Ooops</div></td>
+            <td><div>Ooops</div></td>
+        </tr>
+        <tr>
+            <td>=)</td>
+        </tr>
+    </table>
+</body>
+</html>

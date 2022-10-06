@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Формы</title>
+</head>
+<body>
+<!--
+  Формы:
+    -форма заказа
+    -регистрационные / авторизации
+    -поисковые (не форма?!)
+    -опрос (анкетная)
+    -обратной связи
+    -сообщение в msg
+    -профиль
+-->
+<!--
+  get
+  post
+  put
+  delete
+  patch
+-->
+    <form action="" method="get">
+    <!--
+    Атрибуты input
+    кол-во неа один тег: min 2 max 8-10
+        type - как будет выглядеть input
+        name - имя поля, которое отправляется на сервер
+        value - значение по умолчанию (как-будто написали за пользователя)
+        placeholder - подсказка для пользователя
+        Для работы с числами:
+            min
+            max
+    Поля ввода:
+        -text
+        -email
+        -tel
+        -number
+    Кнопки:
+        -button - ничего не делает без JS
+        -reset - сбросить данные формы
+        -submit - отправить форму на сервер
+    -->
+        <table>
+            <tr>
+                <td>Введите ваше имя</td>
+                <td>
+                    <input type="text" name="user" placeholder="Вася пупкин">
+                </td>
+            </tr>
+            <tr>
+                <td>Ваш электронный адрес</td>
+                <td>
+                    <input type="email" name="email">
+                </td>
+            </tr>
+            <tr>
+                <td>Ваш телефон</td>
+                <td>
+                    <input type="tel" name="phone">
+                </td>
+            </tr>
+            <tr>
+                <td>Город доставки</td>
+                <td>
+                    <input type="text" name="city" value="Комсомольск-на-Амуре">
+                </td>
+            </tr>
+            <tr>
+                <td>Количество товара</td>
+                <td>
+                    <input type="number" name="count" value="1" min="1" max="100">
+                </td>
+            </tr>
+            <tr>
+                <td>Вкусняшки</td>
+                <td>
+<!--                    <input type="range" min="1" max="5" value="4">-->
+<!--                    <input type="color" value="#ff0000">-->
+<!--                    <input type="month">-->
+<!--                    <input type="date" value="2022-12-31">-->
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Заказать"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+
+<!--https://fakerapi.it/api/v1/users?_quantity=10&_gender=male&_locale=ru_RU-->

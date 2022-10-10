@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Формы</title>
+    <style>
+        legend {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Форма заказа худи</h1>
+    <!--
+        Имя
+        Город
+        Почтовый адрес
+        Количество товара
+        Кнопка
+    -->
+    <form action="" method="get">
+        <table>
+            <tr>
+                <td><label for="inp1" >Введите ваше имя</label></td>
+                <td><input id="inp1" type="text" required name="user" placeholder="Никита"></td>
+            </tr>
+            <tr>
+                <td><label for="inp2">Введите ваш город</label></td>
+                <td>
+<!--                    <input id="inp2" type="text" name="city" value="Иваново" placeholder="Москва">-->
+<!--                    <select name="city" id="inp2" multiple>-->
+                    <select name="city" id="inp2">
+                        <optgroup label="РФ">
+                            <option>Иваново</option>
+                            <option>Москва</option>
+                            <option>Комсомольск-на-Амуре</option>
+                        </optgroup>
+                        <optgroup label="не РФ">
+                            <option selected>Караганда</option>
+                        </optgroup>
+                        <option></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Адрес электронной почты</td>
+                <td><input type="email" name="email" placeholder="nik@city.ru"></td>
+                <!-- required - обязательно -->
+            </tr>
+            <tr>
+                <td>Сколько будет худи</td>
+                <td><input type="number" name="count" value="1" min="1" max="10"></td>
+            </tr>
+<!--            tr>td*2>select>option*3-->
+            <tr>
+                <td>Предпочтительное время доставки</td>
+                <td>
+                    <select name="time">
+                        <option value="утро">10:00-13:00</option>
+                        <option value="день">14:00-18:00</option>
+                        <option value="вечер">18:00-22:00</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+<!--                    <input type="button" value="Просто кнопочка">-->
+<!--                    <input type="reset" value="Отмена">-->
+<!--                    <input type="submit" value="Заказть худи">-->
+<!--                    <button type="button">Просто кнопочка</button>-->
+                    <button type="reset">Отмена</button>
+                    <button type="submit">Заказать худи</button>
+                </td>
+            </tr>
+        </table>
+<!--        <input type="tel" name="tel">-->
+<!--        <input type="date" name="date">-->
+<!--        <input type="range" min="1" max="5" value="2" name="quantity">-->
+<!--        <input type="password">-->
+<!--        <input type="month">-->
+<!--        <input type="color" name="color" value="#ff0000">-->
+        <fieldset>
+            <legend>Выберите цвет</legend>
+            <div><label><input type="radio" name="color" value="черный" checked> Черный</label></div>
+            <div><label><input type="radio" name="color" value="кремовый"> Кремовый</label></div>
+            <div><label><input type="radio" name="color" value="синий"> Синий</label></div>
+            <div><label><input type="radio" name="color" value="лиловый"> Лиловый</label></div>
+        </fieldset>
+        <fieldset>
+            <legend>Выберите размер</legend>
+            <div><label><input type="radio" name="size" value="m"> M</label></div>
+            <div><label><input type="radio" name="size" value="l"> L</label></div>
+            <div><label><input type="radio" name="size" value="xl" checked> XL</label></div>
+        </fieldset>
+        <fieldset>
+            <legend>Дополнительные возможности</legend>
+            <div><label><input type="checkbox" name="opt1" value="Добавить принт"> Добавить принт</label></div>
+            <div><label><input type="checkbox" name="opt2" value="Добавить еще один цвет"> Добавить еще один цвет</label></div>
+            <div><label><input type="checkbox" name="opt3" value="Дополнить низ в комплект" checked> Дополнить низ в комплект</label></div>
+        </fieldset>
+
+        <p>Комментарий к заказу</p>
+        <textarea name="message" placeholder="Напишите тут что-нибудь" cols="100" rows="20"></textarea>
+
+    </form>
+</body>
+</html>

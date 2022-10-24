@@ -1,0 +1,25 @@
+.box {
+    background-color: #222;
+    color: grey;
+    width: 200px;
+    height: 200px;
+    /*min-height: 100px;*/
+    /*max-height: 200px;*/
+    overflow: auto; /* visible / hidden / scroll / auto */
+    border-width: 5px;
+    border-color: blue; /* === color */
+    border-style: solid; /* dashed / dotted / double / solid / none */
+    border-right-color: red;
+    border-right-width: 3px;
+    border: 5px lime solid;
+    border-bottom: 10px blue dotted;
+    padding: 20px; /* со всех сторон */
+    padding: 20px 0 100px 100px; /* top right bottom left */
+    padding: 50px 20px; /* y x */
+    padding: 50px 50px 100px; /* top x bottom */
+
+    margin: 20px 20px 50px;
+}
+.red {
+    background-color: #af4a1a;
+}

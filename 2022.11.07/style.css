@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 30px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.first {
+    padding: 30px;
+    background-image: linear-gradient(to bottom left, cyan, cornflowerblue);
+    text-align: center;
+}
+.second {
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+h2 {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+.item {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: calc(25% - 55px); /*20px + 20px + 60px / 4*/
+}
+
+@media print {
+    header {
+        background-color: #fff;
+        color: #000;
+        border-bottom: 1px solid;
+    }
+    .first {
+        background-image: none;
+    }
+    .item {
+        background-color: #fff;
+        color: #000;
+        outline: 1px solid;
+    }
+}
+
+/*
+    print - печатающее устройство (принтер)
+    handheld - наладонный компьютер (смартфон)
+    tv
+    projector
+    braille - устройство Брайля (для людей с ограниченными возможностями)
+    all - все устройства
+    screen - экран
+*/
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+    .first {
+        /*background-image: linear-gradient(to bottom left, cyan, blueviolet);*/
+        background-image: radial-gradient(circle, cyan, blueviolet);
+    }
+}
+
+@media (max-width: 992px) {
+    .item {
+        width: calc(((100% - 40px) / 3) - 40px);
+    }
+}
+@media (max-width: 500px) {
+    .item {
+        width: calc(50% - 50px);
+    }
+}
+@media (max-width: 350px) {
+    .item {
+        width: auto;
+    }
+    .second {
+        flex-direction: column;
+    }
+}
